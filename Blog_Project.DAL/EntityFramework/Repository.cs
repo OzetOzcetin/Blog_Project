@@ -1,5 +1,4 @@
-﻿using Blog_Project.DAL;
-using Blog_Project.Entities;
+﻿using Blog_Project.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,19 +7,17 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog_Project.BLL
+namespace Blog_Project.DAL
 {
-    public class Repository<T> where T : class
+    public class Repository<T> : RepositoryBase where T : class
     {
         //private DatabaseContext db = new DatabaseContext(); //Singleton: Her Repository'den nesne oluşturduğum zaman context tekrar oluştumaycak
 
-        private DatabaseContext db;
         private DbSet<T> _objectSet;
 
         public Repository()
         {
-            db = RepositoryBase.CreateContext();
-            _objectSet = db.Set<T>();
+           _objectSet = context.Set<T>();
         }
         public List<T> List()
         {
@@ -57,7 +54,7 @@ namespace Blog_Project.BLL
 
         private int Save()
         {
-            return db.SaveChanges();
+            return context.SaveChanges();
         }
     }
 }

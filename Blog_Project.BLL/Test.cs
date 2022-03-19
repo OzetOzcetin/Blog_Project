@@ -1,4 +1,5 @@
-﻿using Blog_Project.Entities;
+﻿using Blog_Project.DAL;
+using Blog_Project.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
