@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog_Project.DAL
+namespace Blog_Project.DAL.EntityFramework
 {
     public class MyInitiliazer : CreateDatabaseIfNotExists<DatabaseContext>
     {

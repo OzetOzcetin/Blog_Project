@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog_Project.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,12 +12,9 @@ namespace Blog_Project.UI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            BLL.Test test = new BLL.Test();
-            //test.InsertTest();
-            //test.UpdateTest();
-            //test.DeleteTest();
-            test.CommentTest();
-            return View();
+            BlogManager bm = new BlogManager();
+
+            return View(bm.GetAllBlog());
         }
     }
 }

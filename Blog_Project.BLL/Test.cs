@@ -1,4 +1,4 @@
-﻿using Blog_Project.DAL;
+﻿using Blog_Project.DAL.EntityFramework;
 using Blog_Project.Entities;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
-﻿using Blog_Project.Entities;
+﻿using Blog_Project.DAL.Abstract;
+using Blog_Project.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,9 +8,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog_Project.DAL
+namespace Blog_Project.DAL.EntityFramework
 {
-    public class Repository<T> : RepositoryBase where T : class
+    public class Repository<T> : RepositoryBase,IRepository<T> where T : class
     {
         //private DatabaseContext db = new DatabaseContext(); //Singleton: Her Repository'den nesne oluşturduğum zaman context tekrar oluştumaycak
 
@@ -52,7 +53,7 @@ namespace Blog_Project.DAL
         }
 
 
-        private int Save()
+        public int Save()
         {
             return context.SaveChanges();
         }

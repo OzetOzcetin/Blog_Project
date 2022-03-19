@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Blog_Project.DAL.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog_Project.DAL.EntityFramework
+namespace Blog_Project.DAL.MySql
 {
     public class RepositoryBase
     {
@@ -24,11 +25,11 @@ namespace Blog_Project.DAL.EntityFramework
 
                 lock (_lockSync)
                 {
-                    if(context == null)
+                    if (context == null)
                     {
                         context = new DatabaseContext();
                     }
-                    
+
                 }
             }
         }
