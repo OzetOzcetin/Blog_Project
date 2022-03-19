@@ -12,7 +12,7 @@ namespace Blog_Project.DAL.Abstract
         // Soyutlama sağlayarak DML(Data Manipulation Language) komutlarının sadece EF için değil Oracle,MySql,vb yapılar içinde kullanılabilir olmasını sağlamak.
         List<T> List();
         List<T> List(Expression<Func<T,bool>> where);
-
+        IQueryable<T> ListQueryable();
         int Insert(T obj);
         int Update(T obj);
         int Delete(T obj);

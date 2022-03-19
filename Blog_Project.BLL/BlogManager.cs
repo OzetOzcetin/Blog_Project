@@ -16,5 +16,10 @@ namespace Blog_Project.BLL
         {
             return repo_blog.List();
         }
+
+        public IQueryable<Blog> GetAllBlogQueryable()
+        {
+            return repo_blog.ListQueryable();
+        }
     }
 }
