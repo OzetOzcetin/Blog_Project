@@ -1,5 +1,6 @@
 ﻿using Blog_Project.BLL;
 using Blog_Project.Entities;
+using Blog_Project.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,12 @@ namespace Blog_Project.UI.Controllers
         }
 
         public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel model)
         {
             return View();
         }
