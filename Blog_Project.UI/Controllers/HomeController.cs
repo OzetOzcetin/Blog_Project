@@ -42,5 +42,11 @@ namespace Blog_Project.UI.Controllers
             }           
             return View("Index",cat.Blogs.OrderByDescending(x => x.ModifiedOn).ToList());
         }
+
+        public ActionResult MostLiked()
+        {
+            BlogManager bm = new BlogManager();
+            return View("Index", bm.GetAllBlog().OrderByDescending(x => x.LikeCount).ToList());
+        }
     }
 }
