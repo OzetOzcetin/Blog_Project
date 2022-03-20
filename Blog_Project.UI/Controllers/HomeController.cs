@@ -48,5 +48,24 @@ namespace Blog_Project.UI.Controllers
             BlogManager bm = new BlogManager();
             return View("Index", bm.GetAllBlog().OrderByDescending(x => x.LikeCount).ToList());
         }
+
+        public ActionResult About()
+        {         
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+        public ActionResult Logout()
+        {
+            return View();
+        }
     }
 }

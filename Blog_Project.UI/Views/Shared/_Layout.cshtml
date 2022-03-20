@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script src="~/Content/js/jquery.js"></script>
     <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
@@ -98,13 +98,7 @@
     <div class="container">
 
         <div class="row">
-
-            <div class="col-md-3">
-               @Html.Partial("_PartialCategories")
-            </div>
             @RenderBody()
-
-
         </div>
 
     </div>
@@ -130,10 +124,10 @@
 
                 <div class="col-lg-4 text-center">
                     <h5>
-                        <strong>Note Project</strong>
+                        <strong>Blog Project</strong>
                     </h5>
                     <hr />
-                    <p>Tüm Hakları Saklıdır &copy; <br /> NoteProject @DateTime.Now.Year</p>
+                    <p>Tüm Hakları Saklıdır &copy; <br />BlogProject @DateTime.Now.Year</p>
                 </div>
 
                 <div class="col-lg-4 text-center">
@@ -155,7 +149,7 @@
     </div>
     <!-- /.container -->
     <!-- jQuery -->
-    <script src="~/Content/js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="~/Content/js/bootstrap.min.js"></script>
